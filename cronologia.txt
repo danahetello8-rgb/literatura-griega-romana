@@ -1,0 +1,875 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Descubre la cronología de la literatura en la Antigua Grecia y Roma, sus autores, obras y etapas históricas.">
+<title>Literatura Antigua | Grecia & Roma</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --cream: #fffaf4;
+    --pink: #f2d9d7;
+    --rose: #bd8586;
+    --brown: #73564b;
+    --dark: #49362f;
+    --beige: #e9ddce;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--cream);
+    color: var(--dark);
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.8;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* PORTADA */
+
+.hero {
+    min-height: 580px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    color: white;
+    background:
+    linear-gradient(rgba(40,25,22,.45),rgba(40,25,22,.60)),
+    url("https://images.unsplash.com/photo-1603565816030-6b389eeb23cb?auto=format&fit=crop&w=1800&q=85");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero .small {
+    letter-spacing: 5px;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 7vw, 75px);
+    line-height: 1.15;
+    max-width: 850px;
+}
+
+.hero p {
+    margin-top: 20px;
+    font-size: 17px;
+}
+
+.hero a {
+    margin-top: 30px;
+    padding: 12px 28px;
+    border: 1px solid white;
+    border-radius: 30px;
+    transition: .3s;
+}
+
+.hero a:hover {
+    background: white;
+    color: var(--brown);
+}
+
+/* MENU */
+
+nav {
+    background: #fff7f0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 18px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 3px 12px #72554812;
+}
+
+nav a {
+    color: var(--brown);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 7px 13px;
+    border-radius: 20px;
+}
+
+nav a:hover {
+    background: var(--pink);
+}
+
+/* SECCIONES */
+
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 85px 25px;
+}
+
+.section-label {
+    text-align: center;
+    color: var(--rose);
+    letter-spacing: 4px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.section-title {
+    text-align: center;
+    font-size: clamp(29px, 5vw, 43px);
+    color: var(--brown);
+    margin: 10px 0 20px;
+}
+
+.section-intro {
+    max-width: 750px;
+    margin: 0 auto 40px;
+    text-align: center;
+    color: #806c62;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background: var(--beige);
+}
+
+/* TARJETAS */
+
+.card {
+    background: white;
+    border: 1px solid #eee3d9;
+    border-radius: 18px;
+    padding: 27px;
+    margin-bottom: 25px;
+    box-shadow: 0 7px 25px #785d4b0b;
+}
+
+.card h3 {
+    color: var(--rose);
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    margin-bottom: 12px;
+}
+
+.card ul {
+    padding-left: 25px;
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 13px;
+    margin: 15px 0;
+}
+
+/* IMAGENES GRANDES */
+
+.feature-image {
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin: 25px 0;
+}
+
+/* COLUMNAS */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 23px;
+}
+
+.mini-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid #eee3d9;
+    transition: .3s;
+}
+
+.mini-card:hover {
+    transform: translateY(-5px);
+}
+
+.mini-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.mini-content {
+    padding: 20px;
+}
+
+.mini-content h3 {
+    color: var(--rose);
+    font-size: 21px;
+}
+
+/* DESTACADO */
+
+.quote {
+    background: #f3e4df;
+    padding: 35px;
+    text-align: center;
+    border-radius: 20px;
+    margin: 30px 0;
+    color: var(--brown);
+}
+
+.quote p {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-style: italic;
+}
+
+/* CRONOLOGIA */
+
+.timeline {
+    max-width: 780px;
+    margin: 40px auto;
+    border-left: 3px solid #d9aaaa;
+    padding-left: 30px;
+}
+
+.event {
+    margin-bottom: 35px;
+    position: relative;
+    background: white;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 4px 14px #00000009;
+}
+
+.event::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--rose);
+    position: absolute;
+    left: -39px;
+    top: 25px;
+}
+
+.year {
+    color: var(--rose);
+    font-weight: 700;
+    font-size: 19px;
+}
+
+/* GALERIA */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: .3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+}
+
+/* CONCLUSION */
+
+.conclusion {
+    background: #f2e4dc;
+    padding: 35px;
+    border-radius: 20px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #60483f;
+    color: white;
+    text-align: center;
+    padding: 55px 20px;
+}
+
+footer h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 13px;
+    opacity: .85;
+}
+
+@media(max-width:650px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery img {
+        height: 160px;
+    }
+
+    .hero {
+        min-height: 470px;
+    }
+
+    .card img, .feature-image {
+        height: 230px;
+    }
+
+    section {
+        padding: 55px 18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- PORTADA -->
+
+<header class="hero">
+    <p class="small">✧ Un viaje por la historia ✧</p>
+    <h1>La literatura de Grecia & Roma Antigua</h1>
+    <p>Un recorrido por las palabras que marcaron la historia.</p>
+    <a href="#inicio">Descubrir el blog ♡</a>
+</header>
+
+<!-- MENU -->
+
+<nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#origen">Origen</a>
+    <a href="#grecia">Grecia</a>
+    <a href="#roma">Roma</a>
+    <a href="#autores">Autores</a>
+    <a href="#cronologia">Cronología</a>
+    <a href="#galeria">Galería</a>
+    <a href="#conclusion">Conclusión</a>
+</nav>
+
+<!-- INTRODUCCION -->
+
+<section id="inicio">
+    <p class="section-label">Bienvenidos a nuestro espacio</p>
+    <h2 class="section-title">La magia de la literatura antigua ♡</h2>
+
+    <p class="section-intro">
+    La literatura es una de las formas más importantes de conservar
+    la historia, transmitir conocimientos y expresar los sentimientos
+    de las personas. Desde hace miles de años, las civilizaciones
+    han utilizado la escritura para contar sus experiencias,
+    creencias y tradiciones.
+    </p>
+
+    <img class="feature-image"
+    src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?auto=format&fit=crop&w=1400&q=85"
+    alt="Libros antiguos">
+
+    <div class="card">
+        <h3>¿De qué trata este blog?</h3>
+        <p>
+        En este espacio conoceremos la cronología de la literatura
+        en la Antigua Grecia y Roma, dos civilizaciones que dejaron
+        grandes aportes a la cultura universal.
+        </p>
+
+        <p>
+        Aprenderemos sobre sus etapas históricas, los géneros
+        literarios que desarrollaron, sus escritores más reconocidos
+        y las obras que todavía se leen y estudian en la actualidad.
+        </p>
+    </div>
+
+    <div class="quote">
+        <p>“Las palabras pueden conservar la memoria de toda una civilización”.</p>
+        <br>
+        <span>✿ Literatura e historia ✿</span>
+    </div>
+</section>
+
+<hr>
+
+<!-- ORIGEN -->
+
+<section id="origen">
+    <p class="section-label">Un poco de historia</p>
+    <h2 class="section-title">El origen de la literatura</h2>
+
+    <p class="section-intro">
+    Antes de la aparición de los libros, las historias se transmitían
+    de forma oral, pasando de una generación a otra.
+    </p>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1544967082-d9d25d867d66?auto=format&fit=crop&w=1200&q=85"
+        alt="Libro antiguo">
+
+        <h3>¿Cómo comenzó?</h3>
+
+        <p>
+        En la Antigua Grecia, las personas contaban mitos, leyendas
+        e historias sobre dioses, héroes y guerras. Con el paso
+        del tiempo, estas narraciones comenzaron a escribirse y
+        se convirtieron en grandes obras literarias.
+        </p>
+
+        <p>
+        Roma recibió una gran influencia de Grecia, especialmente
+        en la poesía y el teatro. Sin embargo, desarrolló sus propios
+        temas relacionados con la historia, la política, las
+        costumbres y los valores romanos.
+        </p>
+    </div>
+</section>
+
+<hr>
+
+<!-- GRECIA -->
+
+<section id="grecia">
+    <p class="section-label">Primera gran civilización</p>
+    <h2 class="section-title">La literatura en Grecia 🇬🇷</h2>
+
+    <img class="feature-image"
+    src="https://images.unsplash.com/photo-1603565816030-6b389eeb23cb?auto=format&fit=crop&w=1400&q=85"
+    alt="Templo griego antiguo">
+
+    <p class="section-intro">
+    La literatura griega fue una de las bases de la cultura
+    occidental. Sus obras trataron temas como los dioses,
+    los héroes, el amor, la guerra, la justicia y el destino.
+    </p>
+
+    <div class="card">
+        <h3>01. Época arcaica (siglos VIII-VI a. C.)</h3>
+
+        <p>
+        En esta etapa surgieron las primeras grandes obras épicas.
+        Los poemas narraban aventuras de héroes, guerras y
+        acontecimientos relacionados con los dioses griegos.
+        También apareció la poesía lírica, que expresaba sentimientos.
+        </p>
+
+        <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=1200&q=85"
+        alt="Arte clásico y esculturas">
+
+        <p><b>Autores principales:</b> Homero y Hesíodo.</p>
+        <p><b>Obras importantes:</b></p>
+        <ul>
+            <li>La Ilíada: relata episodios de la guerra de Troya.</li>
+            <li>La Odisea: cuenta el viaje de regreso de Odiseo.</li>
+            <li>Teogonía: explica el origen de los dioses griegos.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>02. Época clásica (siglos V-IV a. C.)</h3>
+
+        <img src="https://images.unsplash.com/photo-1601581875309-fafbf2d3ed3a?auto=format&fit=crop&w=1200&q=85"
+        alt="Teatro antiguo">
+
+        <p>
+        Fue una etapa de gran desarrollo cultural. El teatro
+        alcanzó mucha importancia y aparecieron grandes escritores
+        de tragedias y comedias. También se desarrolló la filosofía,
+        que buscaba explicar la vida y el comportamiento humano.
+        </p>
+
+        <p><b>Autores principales:</b></p>
+        <ul>
+            <li>Sófocles: autor de Edipo rey y Antígona.</li>
+            <li>Eurípides: autor de Medea.</li>
+            <li>Aristófanes: autor de Las nubes.</li>
+            <li>Platón: importante filósofo griego.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>03. Época helenística (323-31 a. C.)</h3>
+
+        <p>
+        Después de la muerte de Alejandro Magno, la cultura griega
+        se extendió por diferentes territorios. La literatura
+        comenzó a presentar nuevos temas, estilos de poesía,
+        relatos y estudios científicos.
+        </p>
+
+        <p><b>Autores principales:</b> Teócrito, Calímaco y Apolonio de Rodas.</p>
+        <p><b>Obras importantes:</b> Idilios y Argonáuticas.</p>
+    </div>
+
+    <div class="quote">
+        <p>Grecia nos dejó historias de héroes, dioses y grandes aventuras.</p>
+        <span>✧ El comienzo de una tradición literaria ✧</span>
+    </div>
+
+    <div class="card">
+        <h3>Características de la literatura griega</h3>
+        <ul>
+            <li>Presencia de dioses y héroes mitológicos.</li>
+            <li>Desarrollo de la poesía épica y lírica.</li>
+            <li>Creación de grandes obras teatrales.</li>
+            <li>Reflexiones sobre la justicia y el destino.</li>
+            <li>Transmisión de mitos y tradiciones.</li>
+        </ul>
+    </div>
+</section>
+
+<hr>
+
+<!-- ROMA -->
+
+<section id="roma">
+    <p class="section-label">Segunda gran civilización</p>
+    <h2 class="section-title">La literatura en Roma 🇮🇹</h2>
+
+    <img class="feature-image"
+    src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1400&q=85"
+    alt="Coliseo romano">
+
+    <p class="section-intro">
+    La literatura romana recibió una gran influencia de Grecia,
+    pero desarrolló su propio estilo y una identidad relacionada
+    con la historia, las costumbres y los valores de Roma.
+    </p>
+
+    <div class="card">
+        <h3>01. Época arcaica (siglos III-II a. C.)</h3>
+
+        <p>
+        En esta etapa comenzó a desarrollarse la literatura latina.
+        Los escritores romanos adaptaron obras griegas y crearon
+        sus propias representaciones teatrales, poemas y relatos.
+        </p>
+
+        <p><b>Autores principales:</b></p>
+        <ul>
+            <li>Livio Andrónico.</li>
+            <li>Gneo Nevio.</li>
+            <li>Plauto.</li>
+            <li>Terencio.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>02. Época de oro (siglo I a. C. - siglo I d. C.)</h3>
+
+        <img src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?auto=format&fit=crop&w=1200&q=85"
+        alt="Manuscritos y libros">
+
+        <p>
+        Fue uno de los períodos más importantes de la literatura
+        romana. Se desarrollaron la poesía, la historia, la oratoria
+        y la filosofía. Los escritores produjeron obras que
+        alcanzaron gran reconocimiento.
+        </p>
+
+        <p><b>Autores principales:</b></p>
+        <ul>
+            <li>Virgilio: autor de La Eneida.</li>
+            <li>Horacio: autor de las Odas.</li>
+            <li>Ovidio: autor de Metamorfosis.</li>
+            <li>Cicerón: destacado orador y escritor.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>03. Época de plata (siglos I-II d. C.)</h3>
+
+        <p>
+        En esta etapa aparecieron nuevos estilos literarios.
+        Los escritores trataron temas relacionados con la sociedad,
+        la moral, la política y la vida cotidiana. También se
+        destacaron la sátira y los textos históricos.
+        </p>
+
+        <p><b>Autores principales:</b></p>
+        <ul>
+            <li>Séneca: filósofo y escritor.</li>
+            <li>Tácito: historiador romano.</li>
+            <li>Juvenal: escritor de sátiras.</li>
+            <li>Marcial: autor de epigramas.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Características de la literatura romana</h3>
+        <ul>
+            <li>Influencia de los escritores griegos.</li>
+            <li>Uso del latín como lengua literaria.</li>
+            <li>Importancia de la historia y la política.</li>
+            <li>Desarrollo de la poesía y el teatro.</li>
+            <li>Presencia de valores como el honor y el deber.</li>
+        </ul>
+    </div>
+</section>
+
+<hr>
+
+<!-- AUTORES -->
+
+<section id="autores">
+    <p class="section-label">Personajes importantes</p>
+    <h2 class="section-title">Grandes autores y sus obras</h2>
+
+    <p class="section-intro">
+    Conoce algunos de los escritores que marcaron la historia
+    de la literatura griega y romana.
+    </p>
+
+    <div class="grid">
+
+        <article class="mini-card">
+            <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=700&q=80"
+            alt="Escultura clásica">
+            <div class="mini-content">
+                <h3>Homero</h3>
+                <p>Poeta griego al que se atribuyen La Ilíada y La Odisea.</p>
+                <b>Grecia · Época arcaica</b>
+            </div>
+        </article>
+
+        <article class="mini-card">
+            <img src="https://images.unsplash.com/photo-1566127992631-137a642a90f4?auto=format&fit=crop&w=700&q=80"
+            alt="Escultura antigua">
+            <div class="mini-content">
+                <h3>Sófocles</h3>
+                <p>Escritor de grandes tragedias como Edipo rey y Antígona.</p>
+                <b>Grecia · Época clásica</b>
+            </div>
+        </article>
+
+        <article class="mini-card">
+            <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=700&q=80"
+            alt="Roma antigua">
+            <div class="mini-content">
+                <h3>Virgilio</h3>
+                <p>Poeta romano reconocido por su obra La Eneida.</p>
+                <b>Roma · Época de oro</b>
+            </div>
+        </article>
+
+        <article class="mini-card">
+            <img src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?auto=format&fit=crop&w=700&q=80"
+            alt="Libros antiguos">
+            <div class="mini-content">
+                <h3>Ovidio</h3>
+                <p>Autor de Metamorfosis, una colección de relatos mitológicos.</p>
+                <b>Roma · Época de oro</b>
+            </div>
+        </article>
+
+        <article class="mini-card">
+            <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=700&q=80"
+            alt="Arte clásico">
+            <div class="mini-content">
+                <h3>Platón</h3>
+                <p>Filósofo griego que desarrolló importantes diálogos filosóficos.</p>
+                <b>Grecia · Época clásica</b>
+            </div>
+        </article>
+
+        <article class="mini-card">
+            <img src="https://images.unsplash.com/photo-1544967082-d9d25d867d66?auto=format&fit=crop&w=700&q=80"
+            alt="Manuscrito">
+            <div class="mini-content">
+                <h3>Horacio</h3>
+                <p>Poeta romano que escribió sobre la vida, el tiempo y la amistad.</p>
+                <b>Roma · Época de oro</b>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<hr>
+
+<!-- CRONOLOGIA -->
+
+<section id="cronologia">
+    <p class="section-label">Viaje a través del tiempo</p>
+    <h2 class="section-title">Línea del tiempo ✧</h2>
+
+    <p class="section-intro">
+    Estos son algunos de los acontecimientos más importantes
+    en el desarrollo de la literatura de Grecia y Roma.
+    </p>
+
+    <div class="timeline">
+
+        <div class="event">
+            <p class="year">Siglo VIII a. C. · Grecia</p>
+            <p>Aparecen las grandes epopeyas atribuidas a Homero: La Ilíada y La Odisea.</p>
+        </div>
+
+        <div class="event">
+            <p class="year">Siglos VII-VI a. C. · Grecia</p>
+            <p>Se desarrolla la poesía lírica y destacan las obras de Hesíodo.</p>
+        </div>
+
+        <div class="event">
+            <p class="year">Siglos V-IV a. C. · Grecia</p>
+            <p>Florecen el teatro, la tragedia, la comedia y la filosofía.</p>
+        </div>
+
+        <div class="event">
+            <p class="year">323 a. C. · Grecia</p>
+            <p>Comienza la época helenística después de la muerte de Alejandro Magno.</p>
+        </div>
+
+        <div class="event">
+            <p class="year">Siglos III-II a. C. · Roma</p>
+            <p>Comienza el desarrollo de la literatura latina.</p>
+        </div>
+
+        <div class="event">
+            <p class="year">Siglo I a. C. · Roma</p>
+            <p>La literatura romana alcanza su época de oro.</p>
+        </div>
+
+        <div class="event">
+            <p class="year">Siglos I-II d. C. · Roma</p>
+            <p>Se desarrolla la literatura de la época de plata.</p>
+        </div>
+
+    </div>
+</section>
+
+<hr>
+
+<!-- GALERIA -->
+
+<section id="galeria">
+    <p class="section-label">Recuerdos de la antigüedad</p>
+    <h2 class="section-title">Galería aesthetic ♡</h2>
+
+    <p class="section-intro">
+    Un pequeño recorrido visual por la arquitectura, el arte
+    y la cultura de las antiguas civilizaciones.
+    </p>
+
+    <div class="gallery">
+
+        <img src="https://images.unsplash.com/photo-1603565816030-6b389eeb23cb?auto=format&fit=crop&w=700&q=85"
+        alt="Templo griego">
+
+        <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=700&q=85"
+        alt="Coliseo romano">
+
+        <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=700&q=85"
+        alt="Arte clásico">
+
+        <img src="https://images.unsplash.com/photo-1544967082-d9d25d867d66?auto=format&fit=crop&w=700&q=85"
+        alt="Libro antiguo">
+
+        <img src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?auto=format&fit=crop&w=700&q=85"
+        alt="Libros">
+
+        <img src="https://images.unsplash.com/photo-1566127992631-137a642a90f4?auto=format&fit=crop&w=700&q=85"
+        alt="Escultura clásica">
+
+    </div>
+</section>
+
+<hr>
+
+<!-- LEGADO Y CONCLUSION -->
+
+<section id="conclusion">
+    <p class="section-label">Una historia que permanece</p>
+    <h2 class="section-title">Importancia y legado</h2>
+
+    <div class="card">
+        <h3>¿Qué nos dejaron estas civilizaciones?</h3>
+
+        <p>
+        La literatura griega y romana dejó una gran influencia
+        en la cultura y la educación actual. Sus escritores
+        desarrollaron diferentes géneros literarios y crearon
+        obras que inspiraron a muchas generaciones.
+        </p>
+
+        <ul>
+            <li>El desarrollo de la poesía épica y lírica.</li>
+            <li>El nacimiento y evolución del teatro occidental.</li>
+            <li>La conservación de mitos y leyendas.</li>
+            <li>El desarrollo de la filosofía y la oratoria.</li>
+            <li>La inspiración para escritores y artistas actuales.</li>
+        </ul>
+    </div>
+
+    <div class="conclusion">
+        <h3>Conclusión ♡</h3>
+
+        <p>
+        La literatura de Grecia y Roma Antigua fue fundamental
+        para el desarrollo de la cultura y el pensamiento humano.
+        Grecia aportó grandes poemas, mitos, tragedias y obras
+        filosóficas, mientras que Roma desarrolló una literatura
+        influenciada por los griegos, pero con características propias.
+        </p>
+
+        <p>
+        Gracias a estas civilizaciones, hoy podemos conocer
+        historias, pensamientos y tradiciones que han sobrevivido
+        durante miles de años. Sus obras continúan siendo estudiadas
+        y demuestran que la literatura es una parte importante
+        de nuestra historia.
+        </p>
+    </div>
+
+    <div class="quote">
+        <p>“Conocer la literatura antigua es descubrir las raíces de nuestra cultura”.</p>
+        <br>
+        <span>Gracias por visitar nuestro blog ✿</span>
+    </div>
+</section>
+
+<!-- PIE DE PAGINA -->
+
+<footer>
+    <h2>Grecia & Roma Antigua</h2>
+    <p>✧ Un viaje por la historia de la literatura ✧</p>
+    <br>
+    <p>Proyecto educativo de Historia y Literatura</p>
+    <p>Creado con ♡ para aprender y descubrir.</p>
+    <br>
+    <p>© 2026 · Blog literario</p>
+</footer>
+
+</body>
+</html>
